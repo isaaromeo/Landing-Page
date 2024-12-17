@@ -1,0 +1,1996 @@
+/* Common */
+@font-face {
+  font-family: 'Abhaya';
+  src: local("Abhaya"), url("./fonts/Abhaya_Libre/AbhayaLibre-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABeeZee';
+  src:
+ local("ABeeZee"),
+ url("./fonts/ABeeZee/ABeeZee-Regular.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+ }
+
+:root {
+  --rtc-primary-color: #d9d9d9;
+  --rtc-select-color1: #c5c5c5;
+  --rtc-select-color2: #b20000;
+  --rtc-select-color3: #000000;
+  --rtc-select-color4: #e2c324;
+  --rtc-select-color5: #0010a1;
+  --rtc-select-color6: #FFFFFF;
+  --rtc-background-color: #F5F5F5;
+}
+
+html, body{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--rtc-background-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* Common */
+/* Header/navbar */
+header {
+  display: flex;
+  padding: 0px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--rtc-background-color);
+}
+
+header > img {
+  width: 25px;
+  height: 25px;
+  padding-left: 10px;
+}
+
+header > nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  list-style: none;
+  font-size: 0.9rem;
+  gap: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar-list> li:hover{
+  padding: 3px;
+  outline: none;
+  background: var(--rtc-select-color1)
+  /* border: 1px solid black; */
+}
+
+header > div{
+  display: flex;
+  width: 30%;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+/* revisar porque no se queitan los estilos de boton */
+.navbar-button{
+  width: 20%;
+  height: 100%;
+  all: unset;
+  display: flex;
+  flex-direction:row
+  
+}
+
+.navbar-button > button > img{
+  display: block;
+   /* width: 100%;
+  height:100%; */
+  width: 25px;
+  height: auto;
+
+}
+
+.navbar-button > button{
+  margin: 4px;
+  outline: none;
+  background:none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar-button > button:hover{
+  padding: 2px;
+  outline: none;
+  background: var(--rtc-select-color1)
+  /* border: 1px solid black; */
+}
+
+
+a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+/* Header/navbar */
+/* Portada */
+
+#hero{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  font-family: 'Abhaya';
+
+}
+
+#hero > img{
+  width: 100%;
+  height: auto;
+}
+
+.hero-text-container{
+  width: 50%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 5%;
+  left: 4%;
+  align-self: center;
+  font-family:'ABeeZee' ;
+  border-radius: 10px;
+  padding: 15px;
+  
+}
+
+.hero-text-container > h1{
+  color: var(--rtc-background-color);
+  font-family: 'Abhaya';
+  font-size: 6rem;
+  font-weight: 400;
+  margin-bottom: 0%;
+  letter-spacing: 3px;
+  
+}
+
+.hero-text-container > p{
+  color: var(--rtc-background-color);
+  font-family: 'ABeeZee';
+  font-size:1rem;
+  
+}
+
+
+
+/* Portada */
+/* Products */
+
+#products{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  justify-self: center;
+  justify-items: center;
+  background-color: var(--rtc-background-color);
+  
+  
+}
+.product{
+  margin: 15px;
+  width: 90%;
+  height: 95%;
+  /* max-width: 950px; */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--rtc-primary-color);
+  border-radius: 2%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  align-self: center;
+
+}
+
+.product:hover{
+  box-shadow: 10px 10px 5px var(--rtc-select-color1);
+}
+
+.product_info{
+  font-family: 'ABeeZee';
+  width: 40%;
+  align-self: start;
+  align-items: flex-start;
+  margin-left: 5%;
+}
+
+.product_info > h3{
+  font-size: 2rem;
+}
+
+.product_info > p{
+  font-size: 1rem;
+}
+
+.more_info{
+  display: flex;
+  width: 90%;
+  height: 10%;
+  justify-content:space-between ;
+  align-items: center;
+  /* padding: 0px 70px 0px 0px; */
+}
+
+.more_info > ul{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  width: 10%;
+  list-style: none;
+  padding-right: 30px;
+}
+
+.more_info > ul > li > button{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-color: white;
+  cursor: pointer;
+  
+  
+}
+
+.more_info > ul > li > button:hover{
+  
+  border: 0.5px solid black;
+  
+  
+}
+
+.more_info > ul > li > button.black{
+  background: var(--rtc-select-color3);
+  
+  
+}
+
+.more_info > ul > li > button.blue{
+  background: var(--rtc-select-color5);
+  
+  
+}
+
+.more_info > ul > li > button.gray{
+  background: var(--rtc-select-color1);
+  
+  
+}
+
+.more_info > ul > li > button.yellow{
+  background: var(--rtc-select-color4);
+  
+  
+}
+.more_info > ul > li > button.red{
+  background: var(--rtc-select-color2);
+  
+  
+}
+
+.product > img{
+  width: 80%;
+  height: 60%;
+  align-self: center;
+  justify-self: center;
+}
+
+.more_info > a {
+  width: 100%;
+  height: 80%;
+  all:unset;
+  color: var(--rtc-select-color3);
+  font-family: 'ABeeZee';
+  font-size: 0.9rem;
+  background-color: var(--rtc-select-color6);
+  border-radius: 25px;
+  border-width: 0;
+  cursor: pointer;
+  padding: 2% 4% 2% 4%;
+
+  
+
+  
+}
+
+.more_info > a:hover{
+  
+  border: 0.5px solid black;
+  
+  
+}
+
+/* Products */
+/* Dealers */
+
+#dealers{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+
+}
+
+.title-container{
+  margin-left: 2%;
+  width: 100%;
+  background-color: var(--rtc-background-color);
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.title-container > h2{
+  width: 60%;
+  font-family:'Abhaya' ;
+  font-size: 7rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 1%;
+  
+}
+
+.title-container > p{
+  width: 30%;
+  font-family:'ABeeZee' ;
+  font-size: 2rem;
+  
+}
+.dealers_hero{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.dealers_hero > img{
+  width: 100%;
+  height: auto;
+ 
+}
+
+.dealers_hero > div{
+  width: 30%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  left: 4%;
+  align-self: center;
+  background-color:#a2a2a27e ;
+  font-family:'ABeeZee' ;
+  border-radius: 10px;
+  padding: 2%;
+ 
+}
+
+.dealers_hero > div > p{
+  width: 90%;
+  color: var(--rtc-background-color);
+  font-size: 3.7rem;
+  padding-left: 2%;
+  margin: 2%;
+  
+ 
+}
+
+.dealers_hero > div > a{
+  all: unset;
+  width: 40%;
+  height: 7%;
+  margin: 2%;
+  padding: 3% 2% 2% 2%;
+  text-align: center;
+  color: #000000;
+  font-family: 'ABeeZee';
+  font-size: 1rem;
+  background-color: var(--rtc-select-color6);
+  border-radius: 25px;
+  border-width: 0;
+  cursor: pointer;
+}
+
+
+.dealers_hero > div > a:hover{
+  
+  border: 0.5px solid black;
+  
+  
+}
+
+/* Dealers */
+/* Feature */
+#features{
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  flex-direction: row;
+  background-color: var(--rtc-background-color);
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-color: rgb(80, 79, 79);
+  scrollbar-track-color: var(--rtc-select-color2);
+  scrollbar-color: var(--rtc-select-color2);
+  
+  
+}
+
+
+
+.feature{
+  margin: 15px;
+  padding-bottom: 15px;
+  min-width: 100px;
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--rtc-primary-color);
+  border-radius: 2%;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  /* padding-left:20px ; */
+  font-family: 'ABeeZee';
+  cursor: pointer;
+}
+
+.feature:hover{
+  box-shadow: 10px 10px 5px var(--rtc-select-color1);
+}
+  
+
+.feature > h4{
+  width: 20%;
+  height: 5%;
+  font-size: 2rem;
+  align-self: flex-start;
+  justify-self: flex-start;
+  padding-left:5%;
+}
+
+.feature > img{
+  width: 90%;
+  height: 60%;
+  /* align-self: center; */
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 5%;
+}
+
+
+.feature > a{
+  all: unset;
+  color: #000000;
+  font-family: 'ABeeZee';
+  font-size: 1rem;
+  width: 25%;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  border-width: 0;
+  text-align: center;
+  align-self: self-start;
+  margin-left: 5%;
+  cursor: pointer;
+
+  
+}
+
+.feature > a:hover{
+  border: 0.5px solid black;
+}
+
+/* Feature */
+/* Maybach */
+#maybach{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.maybach_hero{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.maybach_hero > img{
+  width: 100%;
+  height: auto;
+ 
+}
+
+.maybach_hero > div{
+  width: 40%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 6%;
+  left: 7%;
+  font-family:'ABeeZee' ;
+  font-weight: 400;
+ 
+}
+
+.maybach_hero > div > h3{
+  width: 100%;
+  color: var(--rtc-background-color);
+  font-size: 3.7rem;
+  margin-bottom: 0;
+  font-weight: 400;
+  
+ 
+}
+
+.maybach_hero > div > p{
+  width: 70%;
+  color: var(--rtc-background-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  
+  
+ 
+}
+
+.maybach_wheel{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--rtc-background-color);
+  align-items: center;
+
+}
+
+.maybach_wheel > div{
+  width: 40%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--rtc-background-color);
+  font-family:'ABeeZee' ;
+
+}
+
+.maybach_wheel > div > h3{
+  width: 100%;
+  height: 40%;
+  font-size: 3.5rem;
+  font-weight: 400;
+
+}
+
+.maybach_wheel > div > p{
+  width: 70%;
+  height: 40%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  
+
+}
+
+
+.maybach_wheel > div > img{
+    
+  display:none;
+  
+
+}
+
+.maybach_wheel > div > a{
+  width: 30%;
+  height: 40%;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+
+.maybach_wheel > div > a:hover{
+  font-weight: 700;
+
+}
+.wheel_mobile{
+  width: 40%;
+  max-width:50%;
+  max-height: 80%;
+  display: flex;
+  
+  background-color: var(--rtc-background-color);
+
+}
+
+/* Maybach */
+/* Footer */
+footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* Contact */
+.contact{
+  display: flex;
+  width: 100%;
+  height: 12vh;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #504f4f;
+}
+
+.contact > p{
+  width: 40%;
+  color: var(--rtc-background-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.contact > a{
+  all: unset;
+  width: 10%;
+  height: 15%;
+  background-color: var(--rtc-select-color6);
+  border-radius: 20px;
+  border: solid 2px var(--rtc-background-color);
+  font-family: 'ABeeZee';
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 8px;
+  transition: background 0.3s;
+  
+}
+
+.contact > a:hover {
+  background: var(--rtc-select-color1);
+
+}
+
+/* Contact */
+/* Foot */
+.foot{
+  display: flex;
+  width: 100%;
+  background-color: #000000;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 4%;
+  font-family: 'ABeeZee';
+  color: var(--rtc-background-color);
+}
+
+.newsletter{
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.61);
+}
+.newsletter > p > span{
+  font-size: 2rem;
+  color:var(--rtc-background-color);
+}
+
+.sub{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: black;
+  align-self: center;
+  margin-top: 2%;
+}
+
+.sub > input {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  color: white;
+  background: none;
+  flex: 1;
+}
+
+.sub > input::placeholder {
+  color:var(--rtc-background-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.sub > button {
+  width: 25%;
+  border: none;
+  outline: none;
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  font-size: 1rem;
+  
+  cursor: pointer;
+  border-radius: 50px 50px 50px 50px;
+  transition: background 0.3s;
+}
+
+.sub > button:hover {
+  background: var(--rtc-select-color1);
+
+}
+
+.policy{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-self: baseline;
+  justify-content: center;
+  margin-top: 3%;
+  padding-left: 5%;
+  gap: 10px;
+  font-size: 1rem;
+  text-align: center;
+  
+}
+
+.policy > input{
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.568);
+  border-radius: 2px;
+  background: none;
+}
+
+.rrss{
+  display: flex;
+  width: 20%;
+  align-self: center;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.links{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  align-items: first baseline;
+}
+
+.link{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+
+}
+
+.link > ul{
+  
+  list-style: none;
+  color: var(--rtc-background-color);
+  padding: 0;
+
+}
+
+
+.link > ul > li > a{
+  color: var(--rtc-background-color);
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 100;
+  opacity: 60%;
+}
+
+/* Foot */
+/* Footer */
+
+
+/* Media queries */
+@media (max-width: 375px) {
+
+  /* Navbar/Header */
+  header > nav {
+      display: none;
+  }
+  .menu {
+      display: block;
+  }
+  /* Navbar/Header */
+  
+  /* Portada */
+  #hero{
+    width: 100%;
+    height: 15vh;
+    position: relative;
+    font-family: 'Abhaya';
+  
+  }
+  
+  #hero > img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .hero-text-container{
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: -60%;
+    left: 4%;
+    align-self: center;
+    font-family:'ABeeZee' ;
+    padding: 0px;
+    
+  }
+  
+  .hero-text-container > h1{
+    color: var(--rtc-background-color);
+    font-family: 'Abhaya';
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0%;
+    letter-spacing: 0px;
+    height: 7%;
+    
+  }
+  
+  .hero-text-container > p{
+    color: var(--rtc-background-color);
+    font-family: 'ABeeZee';
+    font-size:0.7rem;
+    
+  }
+  
+  /* Portada */
+  /* Products */
+  #products {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    flex-direction:column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: var(--rtc-background-color);
+  }
+
+  .product_info{
+    align-self: center;
+    text-align: center;
+    width: 80%;
+    margin: 0;
+  }
+
+  .product_info > h3{
+    font-size: 1.2rem;
+  }
+
+  .product_info > p{
+    font-size: 0.8rem;
+  }
+  
+  .more_info{
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0;
+  }
+  .more_info > ul{
+    display: none
+  }
+
+  .more_info > a {
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 8%;
+    height: 70%;
+    padding: 2% 0% 0% 0%;
+    text-align: center;
+  }
+
+  .more_info > a > button {
+    width: 60%;
+    height: 100%;
+    font-size: 0.7rem;
+  }
+  /* Products */
+  /* Dealers */
+  .title-container{
+    width: 100%;
+    height: 30%;
+    background-color: var(--rtc-background-color);
+    padding: 15px;
+  }
+
+  .title-container > h2{
+    width: 90%;
+    font-family:'Abhaya' ;
+    font-size: 2.5rem;
+    text-align:center;
+  
+  }
+
+  .title-container > p{
+    width: 90%;
+    font-family:'ABeeZee' ;
+    font-size: 1.2rem;
+    text-align:center;
+  
+  }
+
+  .dealers_hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .dealers_hero > div{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    background-color:#a2a2a27e ;
+    font-family:'ABeeZee' ;
+    border-radius: 10px;
+    padding: 2%;
+    margin-left: 4%;
+   
+  }
+  
+  .dealers_hero > div > p{
+    
+    font-size: 1.6rem;
+    padding-left: 2%;
+    text-align: center;
+
+  }
+
+  .dealers_hero > div > a{
+    width: 70%;
+    height: 10%;
+    text-align: center;
+    font-size: 0.6rem;
+  }
+
+  /* Dealers */
+  /* Features */
+  #features{
+
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    
+  }
+
+  .feature{
+    flex: 0 0 auto;
+    width: 90%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    gap: 5%;
+    
+    
+  }
+
+  .feature > h4{
+    margin:0;
+    width: 30%;
+    padding:10px;
+    text-align: center;
+    align-self:center;
+    font-size: 1.5rem;
+  }
+
+  .feature > a {
+    width: 30%;
+    align-self:center;
+    
+  }
+
+  .feature > a > button{
+    width: 100%;
+    margin-left: 0;
+    font-size: 0.7rem;
+    
+  }
+  /* Features */
+  /* Maybach */
+  .maybach_hero{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    position: relative;
+  }
+
+
+  .maybach_hero > div{
+    position: absolute;
+    bottom:-40% ;
+    left:0px;
+    background-color: var(--rtc-background-color);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+
+  
+  }
+  
+  .maybach_hero > div > h3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .maybach_hero > div > p{
+    width: 80%;
+    height: 60%;
+    font-size: 0.7rem;
+    color: #000000;
+    
+  }
+  
+  .maybach_wheel{
+    width: 100%;
+    height: 50vh;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--rtc-select-color6);
+    align-items: center;
+  
+  }
+  
+  .maybach_wheel > div{
+    width: 100%;
+    height: 90%;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--rtc-select-color6);
+    font-family:'ABeeZee' ;
+    margin-top: 20%;
+    justify-content: space-around;
+  
+  }
+  
+  .maybach_wheel > div > h3{
+    width: 85%;
+    height: 20%;
+    font-family: 'Abhaya';
+    font-size: 1.5rem;
+    font-weight: 400;
+    align-self: center;
+    text-align: center;
+    order:-2;
+
+  
+  }
+
+  .maybach_wheel > div > img{
+    display: block;
+    width: 90%;
+    height: 90%;
+    border-radius: 3%;
+    align-self: center;
+    order:-1;
+    
+  
+  }
+
+  .wheel_mobile {
+    display: none;
+  
+  }
+  
+  .maybach_wheel > div > p{
+    width: 90%;
+    height: 20%;
+    font-size: 0.8rem;
+    font-weight: 400;
+    align-self: center;
+    padding-top: 5%;
+    padding-left: 5%;
+  
+  }
+  
+  .maybach_wheel > div > a{
+    width: 40%;
+    height: 10%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    align-self: center;
+    text-align: center;
+    background: none;
+    border: none;
+  
+  }
+  /* Maybach */
+  /* Contact */
+  .contact{
+    display: flex;
+    width: 100%;
+    height:15vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    background-color: #504f4f;
+  }
+  
+  .contact > p{
+    width: 80%;
+    color: var(--rtc-background-color);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .contact > a{
+    width: 40%;
+    
+  }
+  .contact > a > button{
+    border-radius: 15px;
+    width: 100%;
+    height: 80%;
+    border: solid 2px #d9d9d9;
+    font-size: 0.7rem;
+    padding: 5px;
+    
+  }
+  /* Contact */
+  /* Foot */
+  .newsletter{
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 10px;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+
+  .newsletter{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 10px;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+
+  .sub{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: black;
+    align-self: center;
+    margin-top: 2%;
+  }
+  .newsletter > p > span{
+    font-size: 1.2rem;
+    color:var(--rtc-background-color);
+  }
+  
+  .sub > input {
+    width: 60%;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 0.9rem;
+    color: white;
+    background: none;
+    flex: 1;
+  }
+
+  .sub > button{
+    width: 40%;
+    font-size: 0.9rem;
+  }
+
+  .policy{
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .rrss{
+    width: 60%;
+  }
+
+  .sub > input::placeholder {
+    color:var(--rtc-background-color);
+    opacity: 0.7;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+
+  .links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    text-align: center;
+  
+  }
+  /* Foot */
+}
+@media (min-width: 375px) and (max-width: 1000px) {
+
+   /* Portada */
+  
+   .hero-text-container{
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: -50%;
+    left: 4%;
+    align-self: center;
+    font-family:'ABeeZee' ;
+    padding: 0px;
+    
+  }
+  
+  .hero-text-container > h1{
+    color: var(--rtc-background-color);
+    font-family: 'Abhaya';
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0%;
+    letter-spacing: 0px;
+    
+  }
+  
+  .hero-text-container > p{
+    color: var(--rtc-background-color);
+    font-family: 'ABeeZee';
+    font-size:0.8rem;
+    
+  }
+  
+  /* Portada */
+  /* Products */
+  .more_info > ul{
+    display: none
+  }
+  .more_info > a {
+    
+    all:unset;
+    color: var(--rtc-select-color3);
+    font-family: 'ABeeZee';
+    font-size: 0.7rem;
+    background-color: var(--rtc-select-color6);
+    border-radius: 25px;
+    border-width: 0;
+    cursor: pointer;
+    padding: 2% 4% 2% 4%;
+    margin-bottom: 5%;
+
+    
+  }
+  
+  /* Products */
+  /* Dealers */
+  .title-container{
+    width: 100%;
+    height: 40%;
+    background-color: var(--rtc-background-color);
+    padding: 15px;
+  }
+
+  .title-container > h2{
+    width: 90%;
+    font-family:'Abhaya' ;
+    font-size: 4rem;
+    font-weight: 400;
+  
+  }
+
+  .title-container > p{
+    width: 80%;
+    font-family:'ABeeZee' ;
+    font-size: 1.5rem;
+  
+  }
+
+  .dealers_hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .dealers_hero > img{
+    width: 100%;
+    height: auto;
+   
+  }
+  
+  .dealers_hero > div{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    left: 4%;
+    align-self: center;
+    background-color:#a2a2a27e ;
+    font-family:'ABeeZee' ;
+    border-radius: 10px;
+    padding: 15px;
+   
+  }
+  
+  .dealers_hero > div > p{
+    width: 100%;
+    color: var(--rtc-background-color);
+    font-size: 1.5rem;
+    padding-left: 2%;
+    margin: 2%;
+    
+   
+  }
+  
+  .dealers_hero > div > a{
+    width: 70%;
+    height: 20%;
+    margin-top: 2%;
+    padding: 5% 2% 2% 2%;
+    font-size: 0.6rem;
+  }
+
+ 
+  /* Dealers */
+  /* Features */
+  #features{
+
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    
+    
+  }
+
+  .feature{
+    flex: 0 0 auto;
+    width: 40%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap: 5%;
+    padding: 0;
+    
+    
+  }
+
+  .feature > h4{
+    margin:0;
+    width: 30%;
+    padding-left:5%;
+    font-size: 1.2rem;
+  }
+
+  .feature > img{
+    margin-bottom: 0;
+  }
+
+
+  .feature > a {
+    width: 30%;
+    font-size: 0.6rem;
+
+    
+  }
+
+  /* Features */
+  /* Maybach */
+  .maybach_hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .maybach_hero > img{
+    width: 100%;
+    height: auto;
+   
+  }
+  
+  .maybach_hero > div{
+    width: 70%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 7%;
+    font-family:'ABeeZee' ;
+    font-weight: 400;
+    margin-bottom: 5%;
+   
+  }
+  
+  .maybach_hero > div > h3{
+    width: 100%;
+    color: var(--rtc-background-color);
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    
+   
+  }
+  
+  .maybach_hero > div > p{
+    width: 60%;
+    color: var(--rtc-background-color);
+    font-size: 0.6rem;
+    font-weight: 400;
+    
+    
+   
+  }
+  
+  .maybach_wheel{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--rtc-background-color);
+    align-items: center;
+  
+  }
+  
+  .maybach_wheel > div{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--rtc-background-color);
+    font-family:'ABeeZee' ;
+    padding-left: 5%;
+  
+  }
+  
+  .maybach_wheel > div > h3{
+    width: 100%;
+    height: 30%;
+    font-size: 1.8rem;
+    font-weight: 400;
+  
+  }
+  
+  .maybach_wheel > div > p{
+    width: 80%;
+    height: 40%;
+    font-size: 1rem;
+    font-weight: 400;
+    
+  
+  }
+  
+  .maybach_wheel > div > img{
+      
+    display:none;
+    
+  
+  }
+  
+  .maybach_wheel > div > a{
+    width: 30%;
+    height: 30%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+  
+  }
+  
+  .maybach_wheel > div > a:hover{
+    font-weight: 700;
+  
+  }
+  .wheel_mobile{
+    width: 40%;
+    max-width:50%;
+    max-height: 80%;
+    display: flex;
+    
+    background-color: var(--rtc-background-color);
+  
+  }
+  /* Maybach */
+  /* Contact */
+  .contact{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    flex-direction: crow;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #504f4f;
+  }
+  
+  .contact > p{
+    width: 50%;
+    color: var(--rtc-background-color);
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left:5% ;
+  }
+  
+  .contact > a{
+    width: 20%;
+    height: 20%;
+  
+  }
+  .contact > a > button{
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    border: solid 2px #d9d9d9;
+    font-size: 0.7rem;
+    padding: 5px;
+    
+  }
+  /* Contact */
+  /* Foot */
+  .newsletter{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 10px;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  
+
+  .links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: first baseline;
+  }
+
+  /* Foot */
+}
+@media (min-width: 1000px) and (max-width: 1440px) {
+
+  /* Portada */
+  
+  .hero-text-container{
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: -50%;
+    left: 4%;
+    align-self: center;
+    font-family:'ABeeZee' ;
+    padding: 0px;
+    
+  }
+  
+  .hero-text-container > h1{
+    color: var(--rtc-background-color);
+    font-family: 'Abhaya';
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 0%;
+    letter-spacing: 0px;
+    
+  }
+  
+  .hero-text-container > p{
+    color: var(--rtc-background-color);
+    font-family: 'ABeeZee';
+    font-size:1rem;
+    
+  }
+  
+  /* Portada */
+  
+  /* Dealers */
+  .title-container{
+    width: 100%;
+    height: 40%;
+    background-color: var(--rtc-background-color);
+    padding: 15px;
+  }
+
+  .title-container > h2{
+    width: 60%;
+    font-family:'Abhaya' ;
+    font-size: 4rem;
+    font-weight: 400;
+  
+  }
+
+  .title-container > p{
+    width: 40%;
+    font-family:'ABeeZee' ;
+    font-size: 1.5rem;
+  
+  }
+
+  .dealers_hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .dealers_hero > img{
+    width: 100%;
+    height: auto;
+   
+  }
+  
+  .dealers_hero > div{
+    width: 25%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    left: 4%;
+    align-self: center;
+    background-color:#a2a2a27e ;
+    font-family:'ABeeZee' ;
+    border-radius: 10px;
+    padding: 15px;
+   
+  }
+  
+  .dealers_hero > div > p{
+    width: 90%;
+    color: var(--rtc-background-color);
+    font-size: 2.7rem;
+    padding-left: 2%;
+    margin: 2%;
+    
+   
+  }
+  
+  .dealers_hero > div > a{
+    width: 70%;
+    height: 40%;
+    margin-top: 2%;
+    padding-left: 2%;
+  }
+
+  .dealers_hero > div > a > button{
+    width: 60%;
+    height: 70%;
+    font-size: 0.7rem;
+    
+  }
+  /* Dealers */
+  /* Features */
+  #features{
+
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    
+    
+  }
+
+  .feature{
+    flex: 0 0 auto;
+    width: 40%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap: 5%;
+    padding: 0;
+    
+    
+  }
+
+  .feature > h4{
+    margin:0;
+    width: 30%;
+    padding-left:5%;
+    font-size: 1.5rem;
+  }
+
+  .feature > img{
+    margin-bottom: 0;
+  }
+
+
+  .feature > a {
+    width: 20%;
+    height: 3%;
+    font-size: 1rem;
+
+    
+  }
+
+  /* Features */
+  /* Maybach */
+  .maybach_hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .maybach_hero > img{
+    width: 100%;
+    height: auto;
+   
+  }
+  
+  .maybach_hero > div{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10%;
+    left: 7%;
+    font-family:'ABeeZee' ;
+    font-weight: 400;
+   
+  }
+  
+  .maybach_hero > div > h3{
+    width: 100%;
+    color: var(--rtc-background-color);
+    font-size: 2.7rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    
+   
+  }
+  
+  .maybach_hero > div > p{
+    width: 50%;
+    color: var(--rtc-background-color);
+    font-size: 1rem;
+    font-weight: 400;
+    
+    
+   
+  }
+  
+  .maybach_wheel{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--rtc-background-color);
+    align-items: center;
+  
+  }
+  
+  .maybach_wheel > div{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--rtc-background-color);
+    font-family:'ABeeZee' ;
+  
+  }
+  
+  .maybach_wheel > div > h3{
+    width: 100%;
+    height: 20%;
+    font-size: 3rem;
+    font-weight: 400;
+    padding-top: 20%;
+  
+  }
+  
+  .maybach_wheel > div > p{
+    width: 80%;
+    height: 20%;
+    font-size: 1rem;
+    font-weight: 400;
+    
+  
+  }
+  
+  
+  .maybach_wheel > div > img{
+      
+    display:none;
+    
+  
+  }
+  
+  .maybach_wheel > div > a{
+    width: 30%;
+    height: 40%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+  
+  }
+  
+  .maybach_wheel > div > a:hover{
+    font-weight: 700;
+  
+  }
+  .wheel_mobile{
+    width: 40%;
+    max-width:50%;
+    max-height: 80%;
+    display: flex;
+    
+    background-color: var(--rtc-background-color);
+  
+  }
+  /* Maybach */
+  /* Contact */
+  .contact{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    flex-direction: crow;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #504f4f;
+  }
+  
+  .contact > p{
+    width: 50%;
+    color: var(--rtc-background-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-left:5% ;
+  }
+  
+  .contact > a{
+    width: 20%;
+    height: 20%;
+  
+  }
+  .contact > a > button{
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    border: solid 2px #d9d9d9;
+    font-size: 0.7rem;
+    padding: 5px;
+    
+  }
+  /* Contact */
+  /* Foot */
+  .newsletter{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 10px;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  
+
+  .links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: first baseline;
+  }
+
+  /* Foot */
+}
+
+
+
+
